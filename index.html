@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Intro to Vue</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="app">
+        <div class="products">
+            <!--
+                Passing the premium data from
+                the Vue instance (app) / the Root
+                to the product component
+                as a prop.
+                :binding to the data means that
+                we'll get the new value
+                if it changes
+                note! lowercase seems to work best! -->
+            <product
+                id="1"
+                :premium="premium"
+                :moreDetails="moreDetails"
+                @add-to-cart="addToCart"
+                @remove-from-cart="removeFromCart"
+            ></product>
+            <product
+                id="2"
+                :premium="premium"
+                :moreDetails="moreDetails"
+                @add-to-cart="addToCart"
+                @remove-from-cart="removeFromCart"
+                ></product>
+            <div class="product cart">
+                <h2 class="small">Cart ({{cart.length}})</h2>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- component has to precede main.js else it doesn't render -->
+    <script src="components/product-details.js"></script>
+    <script src="components/product-review.js"></script>
+    <script src="components/product-tabs.js"></script>
+    <script src="components/product.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

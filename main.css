@@ -1,0 +1,273 @@
+/**
+ * Product styles
+ */
+
+/* general */
+
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    background-color: green;
+    color: #fff;
+}
+
+button.isDisabled {
+    background-color: #eaeaea;
+    color: #666;
+}
+
+button,
+input[type="submit"] {
+    font-size: .85rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: #fff;
+}
+
+.small {
+    font-size: .85rem;
+}
+
+ul,
+ol,
+li {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+/* product grid */
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.product {
+    padding: 0 1rem;
+    border-left: 1px dotted #ccc;
+}
+
+.product:first-child {
+    border-left: 0;
+}
+
+/* product title */
+
+.product-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: .25rem 0;
+}
+
+/* product description */
+
+.product-description {
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* product stock indicator */
+
+.product .stock span {
+    display: inline-block;
+    padding: .25rem;
+    border-radius: .25rem;
+    border: 1px solid;
+}
+
+.product .in-stock span {
+    background-color: rgba(0, 128, 11, 0.25);
+    border-color: rgba(0, 128, 11, .5);
+}
+
+.product .out-of-stock span {
+    background-color: rgba(255, 0, 0, 0.25);
+    border-color: rgba(255, 0, 0, .5);
+}
+
+/* product image */
+
+.product img {
+    display: block;
+    width: auto;
+    height: 150px;
+    border: 1px solid #eaeaea;
+    border-radius: 25% 0;
+}
+
+/* product sub-title */
+
+.product h2 {
+    font-weight: normal;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 2rem;
+}
+
+/* product colors */
+
+.colors {
+    padding: 0;
+    margin: 0;
+}
+
+.colors > li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 .25rem 0;
+    width: 30px;
+    height: 30px;
+    text-indent: -1000rem;
+}
+
+/* product sizes */
+
+.product-sizes ul {
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.product-sizes li {
+    display: inline;
+}
+
+.product-sizes li::before {
+    content: ", ";
+}
+
+.product-sizes li:first-child::before {
+    content: "";
+}
+
+/* product tabs */
+
+.product-tabs ul {
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: -1px;
+}
+
+.product-tab,
+.product-tab-box {
+    padding: .5rem;
+    border: 1px solid #eaeaea;
+}
+
+.product-tab {
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: .5rem .5rem 0 0;
+    cursor: pointer;
+}
+
+.product-tab.selected {
+    font-weight: bold;
+}
+
+.product-tab:first-child {
+    border-right: 0;
+}
+
+.product-tab-box h2 {
+    font-size: .75rem;
+    margin-top: .5rem;
+}
+
+/* product-tabs: reviews */
+
+.product-reviews h3,
+.product-reviews ol li,
+.product-reviews ol li p {
+    margin: 0;
+}
+
+.product-no-reviews {
+    font-size: .75rem;
+}
+
+/* product-tabs: add a review */
+
+.product-review > div::before {
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;;
+    padding: 0 0 .5rem;
+}
+
+.product-review legend,
+.product-review label,
+.product-review input[type="text"],
+.product-review textarea,
+.product-review select {
+    font-family: sans-serif;
+    padding: .25rem;
+}
+
+.product-review label {
+    float: left;
+    width: 40%;
+}
+
+.product-review label + label {
+    width: auto; /* radio yes/no */
+}
+
+.product-review input[type="text"],
+.product-review textarea,
+.product-review select {
+    width: 50%;
+    border: 1px solid #eaeaea;
+}
+
+.product-review .error p,
+.product-review .error ul {
+    color: darkred;
+}
+
+.product-review .error ol {
+    margin-top: .25rem;
+}
+
+.product-review .error li {
+    list-style: none;
+}
+
+/* product cart */
+
+.product.cart h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: .25rem;
+}
