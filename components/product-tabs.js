@@ -74,8 +74,5 @@ Vue.component( 'product-tabs', {
       ],
       selectedTab: 'Reviews'
     }
-  },
-  methods: {
-    //
   }
 });
